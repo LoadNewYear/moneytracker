@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <script src="https://unpkg.com/htmx.org@2.0.2/dist/htmx.js"></script>
+    </head>
+    <body>
+        <h1 id="moneyh1">Money: ₹{{ money }}</h1>
+        <form hx-post="/add" hx-target="#moneyh1">
+            <input type="text" name="amountInput" />
+            <button type="submit">Add!</button>
+        </form>
+    </body>
+</html>
